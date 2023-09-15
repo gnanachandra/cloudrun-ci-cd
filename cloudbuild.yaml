@@ -18,3 +18,5 @@ steps:
     - 'northamerica-northeast1'
 images:
   - 'northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/reactapplicationcicd/reactapplication:$COMMIT_SHA'
+options:
+  logging: CLOUD_LOGGING_ONLY

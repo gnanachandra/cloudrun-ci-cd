@@ -1,4 +1,4 @@
-FROM node16
+FROM node:16
 
 WORKDIR /reactapp
 

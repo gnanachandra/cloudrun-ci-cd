@@ -1,4 +1,4 @@
-FROM node18-alpine as build
+FROM node16
 
 WORKDIR /reactapp
 

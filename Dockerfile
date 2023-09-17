@@ -21,7 +21,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy our nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/reactapp.conf
+COPY reactapp.conf /etc/nginx/conf.d/reactapp.conf
 
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
@@ -30,7 +30,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 
 # Copy static assets from builder stage
-COPY --from=builder /app/build ./
+COPY --from=builder /app/dist ./
 
 # Define environment variables for Cloud Run
 ENV PORT 80
